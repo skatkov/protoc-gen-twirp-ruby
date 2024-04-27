@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and package artifacts
         run: |
-          chmod +x ./compile_protoc_gen_twirp_ruby  # Assuming the script is executable and correct
+          chmod +x ./compile_protoc_gen_twirp_ruby.sh  # Assuming the script is executable and correct
           ./compile_protoc_gen_twirp_ruby.sh
 
       - name: Upload Release Artifacts
