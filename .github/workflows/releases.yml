@@ -5,6 +5,7 @@ on:
         inputs:
           version:
             description: 'Version'
+            required: true
             default: '1.11.0'  # Default version if not specified
 jobs:
   build:
@@ -28,15 +29,9 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: dist/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
           tag_name: v${{ github.event.inputs.version }}
-          release_name: Release v${{ github.event.inputs.version }}
           draft: true
+    
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
