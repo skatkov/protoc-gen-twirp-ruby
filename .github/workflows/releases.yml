@@ -31,7 +31,4 @@ jobs:
           files: dist/*
           tag_name: v${{ github.event.inputs.version }}
           draft: true
-    
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+          token: ${{ secrets.GITHUB_TOKEN }}
