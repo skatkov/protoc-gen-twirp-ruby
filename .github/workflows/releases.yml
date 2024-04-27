@@ -33,3 +33,5 @@ jobs:
           repository: skatkov/protoc-gen-twirp-ruby
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
