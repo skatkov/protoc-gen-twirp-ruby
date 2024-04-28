@@ -27,6 +27,7 @@ for platform in "${platforms[@]}"; do
 
     # Compile the plugin
     go build -o "$output_dir/protoc-gen-twirp_ruby" github.com/arthurnn/twirp-ruby/protoc-gen-twirp_ruby
+    chmod u+x "$output_dir/protoc-gen-twirp_ruby"
 
     echo "Compiled protoc-gen-twirp_ruby for $os/$arch and placed it in $output_dir"
 
